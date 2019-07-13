@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Audio Capture View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AudioCaptureViewController" customModule="AudioCaptureAndPlayback" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86X-0W-Bxi">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem image="record" id="DHU-KJ-7DC">
+                                        <connections>
+                                            <action selector="record_audio:" destination="BYZ-38-t0r" id="t5a-gQ-MCH"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="play" id="io7-0Q-BlK">
+                                        <connections>
+                                            <action selector="playAudio:" destination="BYZ-38-t0r" id="ZlN-5c-9D7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaq-iT-iys">
+                                <rect key="frame" x="0.0" y="334" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="86X-0W-Bxi" secondAttribute="trailing" id="0VK-vQ-D5Y"/>
+                            <constraint firstItem="yaq-iT-iys" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0YW-QU-tO7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="86X-0W-Bxi" secondAttribute="bottom" id="Hhw-ps-87f"/>
+                            <constraint firstItem="yaq-iT-iys" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="314" id="X3L-nn-Vcb"/>
+                            <constraint firstItem="yaq-iT-iys" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="86X-0W-Bxi" secondAttribute="trailing" id="cwy-BQ-nXt"/>
+                            <constraint firstItem="yaq-iT-iys" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="86X-0W-Bxi" secondAttribute="leading" id="r5o-xk-6KJ"/>
+                            <constraint firstItem="86X-0W-Bxi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zYg-aj-caM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="playBtn" destination="io7-0Q-BlK" id="WTL-7G-nvy"/>
+                        <outlet property="recordBtn" destination="DHU-KJ-7DC" id="06j-9j-J7G"/>
+                        <outlet property="recordingTimeLabel" destination="yaq-iT-iys" id="xev-W3-tiV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play" width="23" height="24"/>
+        <image name="record" width="24" height="24"/>
+    </resources>
+</document>
